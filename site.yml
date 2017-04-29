@@ -1,0 +1,11 @@
+---
+- hosts: local
+  become: true
+  remote_user: vagrant
+  vars:
+    url: project.dev
+    document_root: /var/www
+  roles:
+    - nginx
+    - php
+    - mysql
